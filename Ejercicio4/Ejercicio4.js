@@ -14,7 +14,7 @@ const pool = new Pool({
 const app = express();
 const port = 3000;
 
-app.get('/', async (req, res) => {
+app.get('/', async (req, res) => {  //Ejemplo de conexion a la base de datos
   try {
     const result = await pool.query('SELECT NOW()');
     res.send(result.rows[0]);
